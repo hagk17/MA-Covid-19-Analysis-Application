@@ -118,10 +118,18 @@ full_ui <- dashboardPage(
           column(1),
           column(11,
                  div(
-                   HTML("<h5>The time series graphs below visualize the cumulative count and rate (per 100,000) of confirmed COVID-19 cases in 351 Massachusetts cities/towns from January 1, 2020 to July 29, 2020. For confidentiality purposes, <5 cases are represented as 2.5 cases for towns with populations under 50,000.</h5>"),
-                   HTML("<h5><i> Note: graphs may take a moment to load. Thank you for your patience.</i></h5>")
-                   ) #ends div 
+                   HTML("<h5>The time series graphs below visualize the cumulative count and rate (per 100,000) of confirmed COVID-19 cases in 351 Massachusetts cities/towns from January 1, 2020 to July 29, 2020. For confidentiality purposes, <5 cases are represented as 2.5 cases for towns with populations under 50,000.</h5>")
+                 ) #ends div 
                  ) #ends column 11
+        ), #ends fluidRow 
+        
+        fluidRow(
+          column(1),
+          column(11,
+                 div(
+                   HTML("<h5><i> Note: graphs may take a moment to load. Thank you for your patience.</i></h5>")
+                 ) #ends div 
+          ) #ends column 11
         ), #ends fluidRow 
         
         
@@ -176,10 +184,8 @@ full_ui <- dashboardPage(
           column(1),
           column(11,
             div(
-              HTML("<h5>The time series graphs below visualize the cumulative daily cases and deaths for 40 Massachusetts cities/towns from March 23, 2020 to June 1, 2020.</h5>"),
-              HTML("<h5><i> Note: graphs may take a moment to load. Thank you for your patience.</i></h5>")
-              
-              ) #ends div 
+              HTML("<h5>The time series graphs below visualize the cumulative daily cases and deaths for 40 Massachusetts cities/towns from March 23, 2020 to June 1, 2020.</h5>")
+            ) #ends div 
           )#ends 11 column 
         ),#ends fluidRow
         
@@ -235,9 +241,8 @@ full_ui <- dashboardPage(
         fluidRow(column(1),
                  column(11,
                         div(
-                          HTML("<h5>The following graph explores the relationship between COVID-19 cases and various socio-economic aspects of the 351 towns in Massachusetts. Total cases is defined as the cumulative number of confirmed COVID-19 cases from January 1, 2020 to July 29, 2020 as reported by the Massachusetts Department of Public Health. For confidentiality purposes, <5 cases are represented as 2.5 cases for towns with populations under 50,000. All proportions were calculated by dividing the raw variable counts by the town population.</h5>"),
-                          HTML("<h5><i> Note: graphs may take a moment to load. Thank you for your patience.</i></h5>")
-                          )#ends div
+                          HTML("<h5>The following graph explores the relationship between COVID-19 cases and various socio-economic aspects of the 351 towns in Massachusetts. Total cases is defined as the cumulative number of confirmed COVID-19 cases from January 1, 2020 to July 29, 2020 as reported by the Massachusetts Department of Public Health. For confidentiality purposes, <5 cases are represented as 2.5 cases for towns with populations under 50,000. All proportions were calculated by dividing the raw variable counts by the town population.</h5>")
+                        )#ends div
                         )#ends column 11
                  ),#ends fluidRow
 
@@ -283,9 +288,8 @@ full_ui <- dashboardPage(
         fluidRow(column(1),
                  column(11,
                         div(
-                          HTML("<h5> The histogram below visualizes the frequency distribution of COVID-19 cases and socio-economic census counts. This shows how often each different value in the data set occurs, specifically the number of towns whose data value falls between a certain interval. Total cases is defined as the cumulative number of confirmed COVID-19 cases from January 1, 2020 to July 29, 2020 as reported by the Massachusetts Department of Public Health. All proportions were calculated by dividing the raw variable counts by the town population. Summary statistics are provided below the graph. </h5>"),
-                          HTML("<h5><i> Note: graphs may take a moment to load. Thank you for your patience.</i></h5>")
-                          ) #ends div
+                          HTML("<h5> The histogram below visualizes the frequency distribution of COVID-19 cases and socio-economic census counts. This shows how often each different value in the data set occurs, specifically the number of towns whose data value falls between a certain interval. Total cases is defined as the cumulative number of confirmed COVID-19 cases from January 1, 2020 to July 29, 2020 as reported by the Massachusetts Department of Public Health. All proportions were calculated by dividing the raw variable counts by the town population. Summary statistics are provided below the graph. </h5>")
+                        ) #ends div
                         )#ends column 11
         ),#ends fluidRow
         
