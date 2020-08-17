@@ -5,8 +5,8 @@ account: haglichk
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 2678217
-bundleId: 3526419
+bundleId: 3526491
 url: https://haglichk.shinyapps.io/Covid-Analysis-Exploration/
-when: 1597688111.99485
+when: 1597689253.46165
 asMultiple: FALSE
 asStatic: FALSE
