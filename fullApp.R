@@ -800,8 +800,6 @@ full_server <- function(input, output){
 
 
 
-
-
 ##### --- Run the App --- ####
 
 shinyApp(full_ui, full_server)
