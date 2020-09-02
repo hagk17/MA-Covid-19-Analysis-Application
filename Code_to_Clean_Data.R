@@ -6,7 +6,6 @@ library(tidyverse)
 
 source("Cleaning_Function.R")
 
-
 #replace the file below with the path/file name of the new file 
 #this file should have weekly covid data from Mass DPH
 weekly_covid_data <- read.csv("Raw_Data/TOWN_CovidCases_20200819.csv")
