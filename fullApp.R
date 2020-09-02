@@ -369,7 +369,7 @@ full_ui <- dashboardPage(
                    tags$a(href="https://www.census.gov/programs-surveys/acs", "2014-2018 American Community Survey"),
                    
                    #shameless plug 
-                   HTML("<h5>These exploratory visualizations were created and are maintained by Kathryn Haglich, and the source code can be found on "),
+                   HTML("<h5>These exploratory visualizations were created by Kathryn Haglich, and the source code can be found on "),
                    tags$a(href="https://github.com/hagk17/MA-Covid-19-Analysis-Application", "Github."),
                    HTML("To inquire or contribute to this effort, please contact <b>cresshbu@gmail.com</b>.")
                    
