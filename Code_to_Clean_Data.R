@@ -32,14 +32,17 @@ x <- cleaning_function(weekly_covid_data, upDate,
 #saves the data to an excel file 
 #can change the path/name and sheet name in file and sheetName arguments respectively 
 #however, all changes are optional 
-write.xlsx(x[[1]], file="clean_0819_data.xlsx", sheetName = "40 Town Cases,Deaths")
-write.xlsx(x[[2]], file="clean_0819_data.xlsx", sheetName="40 Town Pop,Min,Eng", append=TRUE)
-write.xlsx(x[[3]], file="clean_0819_data.xlsx", sheetName="351 Town Census,Covid", append=TRUE)
-write.xlsx(x[[4]], file="clean_0819_data.xlsx", sheetName="TS Daily Cases,Deaths", append=TRUE)
-write.xlsx(x[[5]], file="clean_0819_data.xlsx", sheetName="TS Weekly Conf,Rates", append=TRUE)
-write.xlsx(x[[6]], file="clean_0819_data.xlsx", sheetName="Total CS, Census", append=TRUE)
+# write.xlsx(x[[1]], file="clean_0819_data.xlsx", sheetName = "40 Town Cases,Deaths")
+# write.xlsx(x[[2]], file="clean_0819_data.xlsx", sheetName="40 Town Pop,Min,Eng", append=TRUE)
+# write.xlsx(x[[3]], file="clean_0819_data.xlsx", sheetName="351 Town Census,Covid", append=TRUE)
+# write.xlsx(x[[4]], file="clean_0819_data.xlsx", sheetName="TS Daily Cases,Deaths", append=TRUE)
+# write.xlsx(x[[5]], file="clean_0819_data.xlsx", sheetName="TS Weekly Conf,Rates", append=TRUE)
+# write.xlsx(x[[6]], file="clean_0819_data.xlsx", sheetName="Total CS, Census", append=TRUE)
 
 # data specifically saved to be used in the application 
+#can change the path/name and sheet name in file and sheetName arguments respectively 
+#recommended to change file name with date of last update 
+#however, all changes are optional 
 write.xlsx(x[[4]], file="app_0819_data.xlsx", sheetName="TS Daily Cases,Deaths", append=TRUE)
 write.xlsx(x[[5]], file="app_0819_data.xlsx", sheetName="TS Weekly Conf,Rates", append=TRUE)
 write.xlsx(x[[6]], file="app_0819_data.xlsx", sheetName="Total CS, Census", append=TRUE)
