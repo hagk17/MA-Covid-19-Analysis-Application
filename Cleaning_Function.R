@@ -56,7 +56,7 @@ cleaning_function <- function(town_covid, latest_date,
 
   
   #### Reads in  Additional Data ####
-  ttown_linkage <- read.csv("Raw_Data/CT_town_linkage.csv")
+  town_linkage <- read.csv("Raw_Data/CT_town_linkage.csv")
   census <- read.csv("Raw_Data/CT_ACS2014_2018_vars.csv")
   town_density <- read.csv("Raw_Data/TOWN_pop_density_sqmi.csv")
   daily_cases <- read.csv("Raw_Data/daily_cases.csv")
