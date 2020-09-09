@@ -5,9 +5,9 @@ account: haglichk
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 2733282
-bundleId: 3585195
+bundleId: 3611774
 url: https://haglichk.shinyapps.io/CovidApp/
-when: 1599070346.17337
+when: 1599673011.44955
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: Cleaning_Function.R|Code_to_Clean_Data.R|README.md|Raw_Data
+ignoredFiles: app_0819_data.xlsx|Cleaning_Function.R|Code_to_Clean_Data.R|README.md|Raw_Data

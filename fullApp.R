@@ -15,13 +15,13 @@ library(scales)
 
 #### --- input/cleaning data --- ####
 ##NOTE: Change with appropriate file name ## 
-daily_data <- readxl::read_excel("app_0819_data.xlsx", sheet = 1)
+daily_data <- readxl::read_excel("app_0902_data.xlsx", sheet = 1)
 daily_data %<>% select(-`...1`, -TOWN_ID)
 
-weekly_data <- readxl::read_excel("app_0819_data.xlsx", sheet = 2)
+weekly_data <- readxl::read_excel("app_0902_data.xlsx", sheet = 2)
 weekly_data %<>% select(-`...1`)
 
-census_data <- readxl::read_excel("app_0819_data.xlsx", sheet = 3)
+census_data <- readxl::read_excel("app_0902_data.xlsx", sheet = 3)
 census_data %<>% select(-`...1`)
 
 ### set up for daily section ###
@@ -121,7 +121,7 @@ full_ui <- dashboardPage(
           column(1),
           column(11,
                  div(
-                   HTML("<h5>The time series graphs below visualize the cumulative count and rate (per 100,000) of confirmed COVID-19 cases in 351 Massachusetts cities/towns from January 1, 2020 to August 19, 2020. For confidentiality purposes, <5 cases are represented as 2.5 cases for towns with populations under 50,000.</h5>"),
+                   HTML("<h5>The time series graphs below visualize the cumulative count and rate (per 100,000) of confirmed COVID-19 cases in 351 Massachusetts cities/towns from January 1, 2020 to Spetember 2, 2020. For confidentiality purposes, <5 cases are represented as 2.5 cases for towns with populations under 50,000.</h5>"),
                    HTML("<h5><i> Note: Graphs may take a moment to load. Thank you for your patience.</i></h5>")
                    ) #ends div 
                  ) #ends column 11
@@ -238,7 +238,7 @@ full_ui <- dashboardPage(
         fluidRow(column(1),
                  column(11,
                         div(
-                          HTML("<h5>The following graph explores the relationship between COVID-19 cases and various socio-economic aspects of the 351 towns in Massachusetts. Total cases is defined as the cumulative number of confirmed COVID-19 cases from January 1, 2020 to August 19, 2020 as reported by the Massachusetts Department of Public Health. For confidentiality purposes, <5 cases are represented as 2.5 cases for towns with populations under 50,000. All proportions were calculated by dividing the raw variable counts by the town population.</h5>"),
+                          HTML("<h5>The following graph explores the relationship between COVID-19 cases and various socio-economic aspects of the 351 towns in Massachusetts. Total cases is defined as the cumulative number of confirmed COVID-19 cases from January 1, 2020 to Spetember 2, 2020 as reported by the Massachusetts Department of Public Health. For confidentiality purposes, <5 cases are represented as 2.5 cases for towns with populations under 50,000. All proportions were calculated by dividing the raw variable counts by the town population.</h5>"),
                           HTML("<h5><i> Note: Graphs may take a moment to load. Thank you for your patience.</i></h5>")
                           )#ends div
                         )#ends column 11
@@ -286,7 +286,7 @@ full_ui <- dashboardPage(
         fluidRow(column(1),
                  column(11,
                         div(
-                          HTML("<h5> The histogram below visualizes the frequency distribution of COVID-19 cases and socio-economic census counts. This shows how often each different value in the data set occurs, specifically the number of towns whose data value falls between a certain interval. Total cases is defined as the cumulative number of confirmed COVID-19 cases from January 1, 2020 to August 19, 2020 as reported by the Massachusetts Department of Public Health. All proportions were calculated by dividing the raw variable counts by the town population. Summary statistics are provided below the graph. </h5>"),
+                          HTML("<h5> The histogram below visualizes the frequency distribution of COVID-19 cases and socio-economic census counts. This shows how often each different value in the data set occurs, specifically the number of towns whose data value falls between a certain interval. Total cases is defined as the cumulative number of confirmed COVID-19 cases from January 1, 2020 to Spetember 2, 2020 as reported by the Massachusetts Department of Public Health. All proportions were calculated by dividing the raw variable counts by the town population. Summary statistics are provided below the graph. </h5>"),
                           HTML("<h5><i> Note: Graphs may take a moment to load. Thank you for your patience.</i></h5>")
                           ) #ends div
                         )#ends column 11
@@ -428,7 +428,6 @@ full_server <- function(input, output){
     lw_hchart <- hchart(left_data, "line", hcaes(x = Time, y = Count, group = Town))%>%
       hc_xAxis(title = list(text = "Week")) %>%
       hc_title(text = input$w_townLeft, margin = 20, align = "left") %>% 
-      #hc_subtitle(text = "Covid Data Last Updated August 19, 2020", align = "left") %>%
       hc_legend(enabled = F)
     
     if(input$w_choice == "w_conf"){
@@ -446,7 +445,6 @@ full_server <- function(input, output){
     rw_hchart <- hchart(right_data, "line", hcaes(x = Time, y = Count, group = Town))%>%
       hc_xAxis(title = list(text = "Week")) %>%
       hc_title(text = input$w_townRight, margin = 20, align = "left") %>% 
-      #hc_subtitle(text = "Covid Data Last Updated August 19, 2020", align = "left") %>%
       hc_legend(enabled = F)
     
     if(input$w_choice == "w_conf"){
@@ -772,8 +770,8 @@ full_server <- function(input, output){
     
     dist_hchart <- hchart(graph_data$X_Value, name = input$d_xvar, color = "#CC0000") %>%
       hc_yAxis(title = list(text = "Frequency")) %>%
-      hc_title(text = input$d_xvar, margin = 20, align = "left")# %>% 
-    #hc_subtitle(text = "Covid Data Last Updated August 19, 2020", align = "left")
+      hc_title(text = input$d_xvar, margin = 20, align = "left")
+    
     
     if(input$dist_log == "log_yes"){
       dist_hchart <- dist_hchart %>%
