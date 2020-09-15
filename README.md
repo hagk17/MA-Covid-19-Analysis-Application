@@ -16,8 +16,8 @@ Unless there are changes to the input, there is no need to edit this file.
 R code that runs the Cleaning_Function and allows for input to update weekly covid cases data. Last updated with data from September 9, 2020. 
 Outputs:
 
-	clean_0819_data.xlsx - Excel doc with sheets for each of the data frames created by Cleaning_Function.R (not necessary for the application) 
-	app_0819_data.xlsx - Excel doc with for the 4-6 dataframes created by Cleaning_Function.R This is necessary for the application and must be in the same directory as fullApp.R
+	clean_0909_data.xlsx - Excel doc with sheets for each of the data frames created by Cleaning_Function.R (not necessary for the application) 
+	app_0909_data.xlsx - Excel doc with for the 4-6 dataframes created by Cleaning_Function.R This is necessary for the application and must be in the same directory as fullApp.R
 
 ## app_0909_data.xlsx 
 This is the data that is needed to run the application. Last updated with data from September 9, 2020. 
@@ -41,8 +41,8 @@ Census tract level vulnerability data for Massachusetts with variables from ACS 
 ### CT_TOWN_linkage.csv
 Linkage file between census tract ID and town ID/name for Massachusetts
 
-### TOWN_CovidCases_20200819.csv
-Weekly confirmed COVID infections and infection rate for all Massachusetts towns from Jan 1, 2020 to September 9, 2020
+### TOWN_CovidCases_20200909.csv
+Weekly confirmed COVID infections and infection rate for all Massachusetts towns from January 1, 2020 to September 9, 2020.
 
 	Conf<DATE>: Covid19 case count by town. For populations <50,000, <5 cases are reported as such or suppressed for confidentiality purposes. 
 
@@ -54,8 +54,8 @@ Weekly confirmed COVID infections and infection rate for all Massachusetts towns
 Population, area in square miles, and population density for all Massachusetts towns 
 
 ### daily_cases.csv
-Daily confirmed COVID cases from March 23 to June 1 for 40 towns 
+Daily confirmed COVID cases from March 23, 2020 to June 1, 2020 for 40 towns 
 
 ### daily_deaths.csv 
-Daily confirmed COVID deaths from March 23 to June 1 for 40 towns 	
+Daily confirmed COVID deaths from March 23, 2020 to June 1,2020 for 40 towns 	
 
