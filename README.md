@@ -13,21 +13,21 @@ Assistant function to read, clean, aggregate, and organize the raw data to prepa
 Unless there are changes to the input, there is no need to edit this file. 
 
 ## Code_to_Clean_Data.R
-R code that runs the Cleaning_Function and allows for input to update weekly covid cases data. Last updated with data from August 19, 2020. 
+R code that runs the Cleaning_Function and allows for input to update weekly covid cases data. Last updated with data from September 9, 2020. 
 Outputs:
 
 	clean_0819_data.xlsx - Excel doc with sheets for each of the data frames created by Cleaning_Function.R (not necessary for the application) 
 	app_0819_data.xlsx - Excel doc with for the 4-6 dataframes created by Cleaning_Function.R This is necessary for the application and must be in the same directory as fullApp.R
 
-## app_0819_data.xlsx 
-This is the data that is needed to run the application. Last updated with data from August 19, 2020. 
+## app_0909_data.xlsx 
+This is the data that is needed to run the application. Last updated with data from September 9, 2020. 
 
 	Sheet 1:  Time series representation of daily cases and deaths 
 	Sheet 2: Time series representation of weekly covid data regarding confirmed cases and rates. 
 	Sheet 3: Town level socio-economic data combined with most recent total covid cases 
 
 ## fullApp.R
-Code to run the full application. Last updated with data from August 19, 2020. 
+Code to run the full application. Last updated with data from September 19, 2020. 
 
 ## rsconnect/documents/fullApp.R/shinyapps.io/haglichk
 This file assists with the publishing of the app - right now to haglichk on shinyapps.io. There is no need to edit this file, and a new one will be created if/when this app is republished to a different url.  
@@ -42,7 +42,7 @@ Census tract level vulnerability data for Massachusetts with variables from ACS 
 Linkage file between census tract ID and town ID/name for Massachusetts
 
 ### TOWN_CovidCases_20200819.csv
-Weekly confirmed COVID infections and infection rate for all Massachusetts towns from Jan 1, 2020 to August 19, 2020
+Weekly confirmed COVID infections and infection rate for all Massachusetts towns from Jan 1, 2020 to September 9, 2020
 
 	Conf<DATE>: Covid19 case count by town. For populations <50,000, <5 cases are reported as such or suppressed for confidentiality purposes. 
 
