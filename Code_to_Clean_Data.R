@@ -9,16 +9,16 @@ source("Cleaning_Function.R")
 
 #replace the file below with the path/file name of the new file 
 #this file should have weekly covid data from Mass DPH
-weekly_covid_data <- read.csv("Raw_Data/TOWN_CovidCases_20200902.csv")
+weekly_covid_data <- read.csv("Raw_Data/TOWN_CovidCases_20200909.csv")
 
 #change the first argument with the most recent date of the weekly cases data 
-upDate = as.Date("09/02", "%m/%d") 
+upDate = as.Date("09/09", "%m/%d") 
 
 #add to the end of this list, 
 #the most recent dates in the for the weekly cases and weekly rates respectively 
 weekly_cases_dates <- c("4/14", "4/22", "4/29", "5/6", "5/13", "5/20", "5/27", "6/3", "6/10",
                         "6/17", "6/24", "7/1", "7/8", "7/15", "7/22", "7/29", "08/05", "8/12",
-                        "8/19", "8/26", "9/2")
+                        "8/19", "8/26", "9/2", "9/9")
 weekly_rates_dates <- c("4/14", "4/22", "4/29", "5/6", "5/13", "5/20", "5/27", "6/3", "6/10",
                         "6/17", "6/24", "7/1", "7/8")
 
@@ -43,9 +43,9 @@ x <- cleaning_function(weekly_covid_data, upDate,
 #can change the path/name and sheet name in file and sheetName arguments respectively 
 #recommended to change file name with date of last update 
 #however, all changes are optional 
-write.xlsx(x[[4]], file="app_0902_data.xlsx", sheetName="TS Daily Cases,Deaths", append=TRUE)
-write.xlsx(x[[5]], file="app_0902_data.xlsx", sheetName="TS Weekly Conf,Rates", append=TRUE)
-write.xlsx(x[[6]], file="app_0902_data.xlsx", sheetName="Total CS, Census", append=TRUE)
+write.xlsx(x[[4]], file="app_0909_data.xlsx", sheetName="TS Daily Cases,Deaths", append=TRUE)
+write.xlsx(x[[5]], file="app_0909_data.xlsx", sheetName="TS Weekly Conf,Rates", append=TRUE)
+write.xlsx(x[[6]], file="app_0909_data.xlsx", sheetName="Total CS, Census", append=TRUE)
 
 
 
