@@ -15,13 +15,13 @@ library(scales)
 
 #### --- input/cleaning data --- ####
 ##NOTE: Change with appropriate file name ## 
-daily_data <- readxl::read_excel("app_0902_data.xlsx", sheet = 1)
+daily_data <- readxl::read_excel("app_0909_data.xlsx", sheet = 1)
 daily_data %<>% select(-`...1`, -TOWN_ID)
 
-weekly_data <- readxl::read_excel("app_0902_data.xlsx", sheet = 2)
+weekly_data <- readxl::read_excel("app_0909_data.xlsx", sheet = 2)
 weekly_data %<>% select(-`...1`)
 
-census_data <- readxl::read_excel("app_0902_data.xlsx", sheet = 3)
+census_data <- readxl::read_excel("app_0909_data.xlsx", sheet = 3)
 census_data %<>% select(-`...1`)
 
 ### set up for daily section ###
